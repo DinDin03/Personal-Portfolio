@@ -1,68 +1,94 @@
 <!DOCTYPE html> <!-- this tells the browser that the document is written in HTML5 -->
 <html lang="en"> <!-- specifies the language of the page as English  -->
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dineth Himasha Katanwala | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+<head> <!-- head conatains essential metadata and external file links -->
+    <meta charset="UTF-8"> <!-- defines the character encoding as UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- makes the page responsive by ensuring it scales properly on mobile devices -->
+    <title>Dineth Himasha Katanwala | Portfolio</title> <!-- sets the title of the page -->
+    <link rel="stylesheet" href="style.css"> <!-- links an external CSS file -->
+    <script defer src="script.js"></script> <!-- loads javascript with the defer attribute ensuring it runs after the HTML is fully loaded -->
 </head>
-<body>
+<body> <!-- visible content of the page -->
 
-    <header>
-        <div class="logo">Dineth Himasha Katanwala</div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <header> <!-- Defines the top section of the page-->
+        <div class="logo">Dineth Himasha Katanwala</div> <!-- display my name as a logo -->
+        <nav> <!-- contains a navigation menu -->
+            <ul class="nav-links"> <!-- an unordered list containing navigation links -->
+                <li><a href="#about">About</a></li> <!-- links to the about section of the page -->
+                <li><a href="#projects">Projects</a></li> <!-- links to the project section of the page -->
+                <li><a href="#contact">Contact</a></li> <!-- links to the contact section of the page -->
             </ul>
         </nav>
     </header>
 
-    <section id="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm <span>Dineth Himasha Katanwala</span></h1>
-            <p>Software Developer | C++ Enthusiast | Web Learner</p>
-            <a href="#projects" class="btn">View Projects</a>
+    <section id="hero"> <!-- introduces myself -->
+        <div class="hero-content"> <!--  -->
+            <h1>Hi, I'm <span>Dineth Himasha Katanwala</span></h1> <!-- displays a large heading with my name inside span for styling -->
+            <p>Software Developer | C++ Enthusiast | Web Learner</p> <!-- a paragraph about me -->
+            <a href="#projects" class="btn">View Projects</a> <!-- A button linking to the project section -->
         </div>
     </section>
 
     <section id="about">
-        <h2>About Me</h2>
-        <p>I am a Computer Science student at the University of Adelaide with strong C++ skills. I enjoy building software, games, and exploring web development.</p>
+        <h2>About Me</h2> <!-- heading for the about me section -->
+        <p>
+            I am a passionate and dedicated second-year Computer Science student at the University of Adelaide, with a strong interest in software development and problem-solving. My coursework in data structures, algorithm analysis, operating systems, and computer systems has equipped me with the ability to understand and apply theoretical concepts in real-world scenarios.
+        </p>
+        <p>
+            Over the past few years, I have independently developed multiple projects that have strengthened my technical skills and creativity. Notably, I built a fully functional Sudoku game in C++ using Raylib and CMake, incorporating an interactive GUI and complex algorithms like backtracking. Additionally, I developed a Bank Management System that helped me master object-oriented programming by implementing secure and efficient core functionalities. Currently, I am working on a 3D Chess game, focusing on advanced GUI programming and algorithm optimization. Alongside this, I am also building a personal portfolio website to showcase my projects and technical expertise.
+        </p>
+        <p>
+            Beyond academics and personal projects, I actively participate in programming competitions and community coding events. My involvement with the Computer Science and Competitive Programming Club, along with intensive training programs like Ravi’s Study Program, has helped me sharpen my problem-solving skills, master new technologies, and prepare for technical interviews. These experiences have also enhanced my teamwork, communication, and time management abilities.
+        </p>
+        <p>
+            I am eager to apply my academic knowledge and project experience in a professional setting. I am currently seeking a **Software Engineer Internship**, where I can contribute my C++ expertise while continuing to grow as a software engineer by working on modern development projects in a collaborative team environment.
+        </p>
+         <!-- a paragraph about me -->
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
+    <section id="projects"> <!-- section to display projects -->
+        <h2>Projects</h2> <!-- heading for projects -->
         <div class="project-grid">
             <div class="project">
-                <h3>Sudoku Game</h3>
-                <p>A C++ game built with raylib and CMake.</p>
-                <a href="https://github.com/yourgithub/sudoku" target="_blank">GitHub Repo</a>
+                <h3>Sudoku Game</h3> <!-- project title -->
+                <p>A C++ game built with raylib and CMake.</p> <!-- a paragraph about the project -->
+                <a href="https://github.com/DinDin03/Sudoku2D" target="_blank">GitHub Repo</a> <!-- a link to the project -->
             </div>
             <div class="project">
                 <h3>Bank Management System</h3>
                 <p>OOP-based banking system with file handling.</p>
-                <a href="https://github.com/yourgithub/bank-management" target="_blank">GitHub Repo</a>
+                <a href="https://github.com/DinDin03/Bank-Management-System" target="_blank">GitHub Repo</a>
             </div>
             <div class="project">
                 <h3>3D Chess Game</h3>
                 <p>A 3D chess engine with rendering in C++.</p>
-                <a href="https://github.com/yourgithub/3d-chess" target="_blank">GitHub Repo</a>
+                <a href="https://github.com/DinDin03/Chess3D" target="_blank">GitHub Repo</a>
+            </div>
+            <div class="project">
+                <h3>Personal Portfolio Website</h3>
+                <p>My personal website built with HTML, CSS, and JavaScript.</p>
+                <a href="https://github.com/DinDin03/Personal-Portfolio" target="_blank">Github Repo</a>
+            </div>
+            <div class="project">
+                <h3>Wi-Fi Door Lock System</h3>
+                <p>Smart door lock system with Wi-Fi connectivity.</p>
+            </div>
+            <div>
+                <h3> Automatic Plant Watering system</h3>
+                <p>System that automatically waters plants using sensors and microcontrollers.</p>
             </div>
         </div>
     </section>
 
     <section id="contact">
         <h2>Contact Me</h2>
-        <p>Email: your.email@example.com</p>
-        <p>GitHub: <a href="https://github.com/yourgithub" target="_blank">github.com/yourgithub</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/yourlinkedin" target="_blank">linkedin.com/in/yourlinkedin</a></p>
+        <p>Email: <a href="mailto:dineth.himasha@outlook.com">dineth.himasha@outlook.com</a></p>
+        <p>GitHub: <a href="https://github.com/DinDin03" target="_blank">Click Here</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/dinethkatanwala/" target="_blank">Click Here</a></p>
+        <p> Do not click this link! <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Link</a></p>
     </section>
 
     <footer>
-        <p>© 2025 Your Name | Built with ❤️</p>
+        <p>© 2025 Dineth </p>
     </footer>
 
 </body>
