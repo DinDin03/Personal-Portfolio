@@ -391,76 +391,96 @@
             transform: translateY(-3px);
         }
 
-        /* Education section */
+        /* Education section styles matching project section */
         #education {
             background-color: var(--light);
         }
 
-        .timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
         }
 
-        .timeline:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 2px;
-            height: 100%;
-            background-color: var(--primary);
-            transform: translateX(-50%);
-        }
-
-        .timeline-item {
-            position: relative;
-            width: 50%;
-            padding: 0 40px 50px;
-        }
-
-        .timeline-item:nth-child(odd) {
-            left: 0;
-        }
-
-        .timeline-item:nth-child(even) {
-            left: 50%;
-        }
-
-        .timeline-content {
-            padding: 2rem;
-            background-color: white;
+        .education-card {
             border-radius: var(--border-radius);
+            overflow: hidden;
+            background-color: white;
             box-shadow: var(--shadow);
-            position: relative;
+            transition: var(--transition);
         }
 
-        .timeline-content:before {
-            content: '';
-            position: absolute;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
+        .education-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .education-img {
+            width: 100%;
+            height: 200px;
             background-color: var(--primary);
-            top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
         }
 
-        .timeline-item:nth-child(odd) .timeline-content:before {
-            right: -48px;
+        .education-content {
+            padding: 1.5rem;
         }
 
-        .timeline-item:nth-child(even) .timeline-content:before {
-            left: -48px;
+        .education-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
         }
 
-        .timeline-date {
-            display: inline-block;
+        .education-period {
+            color: var(--primary);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .education-institution {
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .education-description {
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+        }
+
+        .education-achievements {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .achievement-item {
+            background-color: var(--light);
+            color: var(--dark);
             padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .achievement-item:hover {
             background-color: var(--primary);
             color: white;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
+            transform: translateY(-3px);
+        }
+
+        /* Media query for responsive design */
+        @media (max-width: 768px) {
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* Community Involvement */
@@ -753,7 +773,8 @@
                         <p class="project-description">A responsive personal portfolio website featuring a structured
                             layout and interactive elements to showcase projects and skills across different devices.
                         </p>
-                        <a href="https://github.com/DinDin03/Personal-Portfolio" target="_blank" class="btn">View Project</a>
+                        <a href="https://github.com/DinDin03/Personal-Portfolio" target="_blank" class="btn">View
+                            Project</a>
                     </div>
                 </div>
             </div>
@@ -814,21 +835,45 @@
     <section id="education">
         <div class="container">
             <h2 class="section-title">Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <span class="timeline-date">July 2022 - July 2026 (Expected)</span>
-                        <h3>Bachelor of Computer Science (Advanced)</h3>
-                        <h4>The University of Adelaide</h4>
-                        <p>Major in Artificial Intelligence</p>
-                        <p>GPA: 6.0/7.0</p>
+            <div class="education-grid">
+                <!-- University Education -->
+                <div class="education-card">
+                    <div class="education-img">
+                        <i class="fas fa-university"></i>
                     </div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">Feb 2019 - Oct 2021</span>
-                        <h3>High School Diploma</h3>
-                        <h4>Marryatvile High School</h4>
-                        <p>Specialist Maths, Math Methods, Physics &amp; Robotics</p>
-                        <p>ATAR: 98.7</p>
+                    <div class="education-content">
+                        <h3 class="education-title">Bachelor of Computer Science (Advanced)</h3>
+                        <p class="education-period">July 2022 - July 2026 (Expected)</p>
+                        <p class="education-institution">The University of Adelaide</p>
+                        <p class="education-description">Major in Artificial Intelligence with focus on machine learning
+                            and data science. Currently maintaining a GPA of 6.0/7.0 while participating in various
+                            programming competitions and projects.</p>
+                        <div class="education-achievements">
+                            <span class="achievement-item">GPA: 6.0/7.0</span>
+                            <span class="achievement-item">AI Major</span>
+                            <span class="achievement-item">Dean's List</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- High School Education -->
+                <div class="education-card">
+                    <div class="education-img">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3 class="education-title">High School Diploma</h3>
+                        <p class="education-period">Feb 2019 - Oct 2021</p>
+                        <p class="education-institution">Marryatvile High School</p>
+                        <p class="education-description">Completed high school with distinction in mathematics and
+                            physics. Participated in robotics competitions and coding clubs as extracurricular
+                            activities.</p>
+                        <div class="education-achievements">
+                            <span class="achievement-item">ATAR: 98.7</span>
+                            <span class="achievement-item">Specialist Maths</span>
+                            <span class="achievement-item">Physics</span>
+                            <span class="achievement-item">Robotics</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -929,6 +974,6 @@
             <p>&copy; 2025 Dineth Katanwala. All Rights Reserved.</p>
         </div>
     </footer>
-    </body>
-    </html>
-    
+</body>
+
+</html>
