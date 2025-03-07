@@ -189,7 +189,7 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            background-color: var(--light);
+            background: linear-gradient(to bottom, #95b5f0, white);
             padding-top: 4rem;
         }
 
@@ -222,10 +222,18 @@
         }
 
         .hero-image img {
-            max-width: 100%;
-            border-radius: 50%;
+            width: auto;
+            /* Keep original width */
+            height: 400px;
+            /* Adjust height to a portrait shape */
+            border-radius: 20px;
+            /* Optional: rounded corners */
+            object-fit: cover;
+            /* Ensure the image fills the container */
             box-shadow: var(--shadow);
+            /* Keep the shadow effect */
         }
+
 
         .social-links {
             display: flex;
@@ -252,7 +260,7 @@
 
         /* About section */
         #about {
-            background-color: white;
+            background: linear-gradient(to bottom, white, #95b5f0);
         }
 
         .about-content {
@@ -275,7 +283,7 @@
 
         /* Projects section */
         #projects {
-            background-color: var(--light);
+            background: linear-gradient(to bottom,#95b5f0,white);
         }
 
         .section-title {
@@ -353,9 +361,8 @@
         }
 
         .skills-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
+            display: flex;
+            flex-direction: column;
         }
 
         .skill-category {
@@ -365,7 +372,6 @@
         .skill-category h3 {
             margin-bottom: 1rem;
             font-size: 1.5rem;
-            border-bottom: 2px solid var(--primary);
             padding-bottom: 0.5rem;
             display: inline-block;
         }
@@ -683,7 +689,7 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="" alt="Dineth Katanwala">
+                    <img src="image.jpg" alt="Dineth Katanwala">
                 </div>
             </div>
         </div>
@@ -694,7 +700,7 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-image">
-                    <img src="/api/placeholder/500/400" alt="About Dineth">
+                    <img src="imag3copy.JPG" alt="About Dineth">
                 </div>
                 <div class="about-text">
                     <p>Hello! I'm Dineth, a Computer Science student at the University of Adelaide, specializing in
@@ -708,7 +714,8 @@
                         pushing my boundaries to grow as a developer.</p>
                     <div class="flex" style="gap: 1rem; margin-top: 2rem;">
                         <a href="#contact" class="btn">Get in Touch</a>
-                        <a href="#" class="btn btn-outline">Download Resume</a>
+                        <a href="resume.pdf" class="btn btn-outline" download="resume.pdf">Download Resume</a>
+
                     </div>
                 </div>
             </div>
